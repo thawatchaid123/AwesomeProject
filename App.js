@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
 
 import { View } from 'react-native';
-import Greeting from './Components/Greeting';
+
 
 
 import Welcome from './screens/Welcome';
@@ -18,8 +19,12 @@ import Ex09 from './screens/Ex09';
 import Ex10 from './screens/Ex10';
 import Ex11 from './screens/Ex11';
 import Ex12 from './screens/Ex12';
-
+import Greeting from './components/Greeting';
 import Travel from './screens/week3/Travel';
+
+import Health from './screens/week5/Health';
+
+import Resort from './screens/week4/Resort';
 
 
 
@@ -30,10 +35,8 @@ export default function App() {
   //      <Greeting name='Jaina' />
    //     <Greeting name='Valeera' />
     //  </View>
-
-<Travel />
-
-  // <Welcome />
+   // <Greeting/>
+   //<Welcome />
     //<Ex01 />
     //<Ex02 />
     //<Ex03 />
@@ -41,11 +44,15 @@ export default function App() {
     //<Ex05 />
     //<Ex06 />
     //<Ex07 />
-   // <Ex08 />
+    //<Ex08 />
     //<Ex09 />
     //<Ex10 />
     //<Ex11 />
     //<Ex12 />
+   // <Travel/>
+   <Health />
+   //<Resort/>
+
 
   );
 }
