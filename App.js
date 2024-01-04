@@ -28,6 +28,10 @@ import Resort from './screens/week4/Resort';
 
 
 import Home from './screens/week6/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeStack from './navigations/HomeStack';
+import BottomTab from './navigations/BottomTab';
+import RootStack from './navigations/RootStack';
 
 
 
@@ -52,10 +56,16 @@ export default function App() {
     //<Ex10 />
     //<Ex11 />
     //<Ex12 />
-   // <Travel/>
+   //<Travel/>
     //<Health />
    //<Resort/>
-   <Home/>
+   //<Home/>
+   <NavigationContainer>
+   {/* <HomeStack/> */}
+   {/* <BottomTab/> */}
+   <RootStack/>
+    </NavigationContainer>
+
 
 
 
