@@ -4,6 +4,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 // import { TouchableOpacity } from "react-native-gesture-handler";
 import BookStorage from "../../storages/BookStorage";
+import BookService from "../../services/BookService";
 export default function Book() {
     const navigation = useNavigation();
     
@@ -32,7 +33,9 @@ export default function Book() {
     //UI
     const loadBooks = async () => {
         setRefresh(true);
-        let products = await BookStorage.readItems();
+        // let products = await BookStorage.readItems();
+        let products = await BookService.getItems();
+
         setProducts(products);
         setRefresh(false);
       };

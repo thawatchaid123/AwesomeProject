@@ -27,7 +27,9 @@ export default function BookForm() {
 
   const onLoad = async () => {
     if (item) {
-      let book = await BookStorage.readItemDetail(item);
+      // let book = await BookStorage.readItemDetail(item);
+      let book = await BookService.getItemDetail(item);
+
       setId(book.id);
       setName(book.name);
       setPrice(book.price.toString());
@@ -44,6 +46,12 @@ export default function BookForm() {
     //SAVE
     await BookStorage.writeItem(new_data);
     //REDIRECT TO
+    if(item){
+      await BookService.updateItem(new_data);
+    }else{
+      await BookService.storeItem(new_data);
+    }
+
     navigation.navigate("Book");
   };
 
