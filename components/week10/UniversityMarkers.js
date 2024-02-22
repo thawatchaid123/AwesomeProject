@@ -14,7 +14,7 @@ export default function UniversityMarkers(props) {
       key={item.id.toString()}
       description={item.address}
     >
-        <FontAwesome name="male" size={50} color="tomato" />
+        <FontAwesome name="bank" size={50} color="tomato" />
     </Marker>
   ));
 }

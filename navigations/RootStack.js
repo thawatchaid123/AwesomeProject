@@ -12,12 +12,24 @@ import BookForm from "../screens/week9/BookForm";
 import TodoList from "../screens/week9/TodoList";
 import LocationQuiz from "../screens/week10/LocationQuiz";
 import Location from "../screens/week10/Location";
+//p
+import Homepage from "../components/Project/Homepage";
+import Menu from "../components/Project/Menu";
+import Table from "../components/Project/Table";
+import Map from "../components/Project/Map";
+import Menuform from "../components/Project/Menuform";
+import Menudetail from "../components/Project/Menudetail";
+
+import Pjbottom from "./Pjbottom";
+
+
 const Stack = createStackNavigator();
 
 export default function RootStack() {
   return (
     <Stack.Navigator initialRouteName="BottomTab">
       <Stack.Screen name="BottomTab" component={BottomTab} options={{ headerShown: false }} />
+      <Stack.Screen name="Pjbottom" component={Pjbottom} options={{ headerShown: false }} />
       <Stack.Screen name="PokemonTab" component={PokemonTab} options={{ title : "Pokemon World" }}  />
       <Stack.Screen name="Travel" component={Travel} options={{ title : "Travel " }}  />
       <Stack.Screen name="Resort" component={Resort} options={{ title : "Resort " }}  />
@@ -31,7 +43,13 @@ export default function RootStack() {
       <Stack.Screen name="Location" component={Location} />
       <Stack.Screen name="LocationQuiz" component={LocationQuiz} />
 
-
+      {/* project */}
+      <Stack.Screen name="Homepage" component={Homepage} />
+      <Stack.Screen name="Menu" component={Menu} />
+      <Stack.Screen name="Table" component={Table} />
+      <Stack.Screen name="Map" component={Map} />
+      <Stack.Screen name="Menuform" component={Menuform} />
+      <Stack.Screen name="Menudetail" component={Menudetail} />
     </Stack.Navigator>
   );
 }

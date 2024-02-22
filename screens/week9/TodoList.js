@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList , TouchableOpacity  } from 'react-native';
+import { View, FlatList , TouchableOpacity, Text  } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import TodoItem from '../../components/week9/TodoItem';
 import TodoStorage from '../../storages/TodoStorage';
+
 // import { useNavigation } from '@react-navigation/native';
 
 export default function TodoList() {
     // const navigation = useNavigation();
     const [todos, setTodos] = useState(
         [
-            { id: '1', completed: false, title: "exercise @ 7.00" },
-            { id: '2', completed: false, title: "meeting @ 9.00" },
-            { id: '3', completed: false, title: "go to cinema @ 19.00" },
+            { id: '1', completed: false, title: "    เพิ่มข้อมูล" },
+            { id: '2', completed: false, title: " เพิ่มข้อมูล" },
+            { id: '3', completed: false, title: " เพิ่มข้อมูล" },
         ]
     );
 
@@ -19,16 +20,25 @@ export default function TodoList() {
 
     const onLoad = async () => {
         // READ ITEMS FROM STORAGE
-        let data = await TodoStorage.readItems();
-        // console.log("data:", data);
+        // let data = await TodoStorage.readItems();
+        console.log("data:", data);
 
         // SET STATE - WRITE CODE HERE
+        //A NEW ITEM
+    let new_data = { id: id, name: name, price: price, image: image };
+    //SAVE
+    await TodoStorage.writeItem(new_data);
+    //REDIRECT TO
+    navigation.navigate("TodoStorage");
 
+          
     };
 
     useEffect(()=>{
         onLoad();
     },[]);
+
+
 
     const onCreate = () => {
         let new_data = {
@@ -45,6 +55,7 @@ export default function TodoList() {
 
         // WRITE ITEM TO STORAGE - WRITE CODE HERE
         
+
     };     
     const onUpdate = (new_title, id) => {   
         //CLONE ARRAY FIRST

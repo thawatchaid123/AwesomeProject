@@ -39,12 +39,9 @@ export default function PokemonTab() {
               headerShown : false
           }}
         />
-      </Tab.Navigator>
-  
-            
+      </Tab.Navigator>       
     );
 }
-
 
 function FlashScreen(){
     return (

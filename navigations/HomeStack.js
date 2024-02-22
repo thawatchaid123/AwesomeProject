@@ -87,13 +87,6 @@ export default function HomeStack() {
             options={{ title: "Exercise 12" }}
           />
         </Stack.Navigator>
-
-        
-
-        
-
-
-
       );
     
 }

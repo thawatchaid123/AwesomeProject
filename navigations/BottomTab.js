@@ -47,8 +47,6 @@ export default function BottomTab() {
               tabBarIcon: ({ color, size }) => ( <FontAwesome name="paw" color={color} size={size} /> ),
             }}
           />
-          
         </Tab.Navigator>
-      );
-    
+      ); 
 }

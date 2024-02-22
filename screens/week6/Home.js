@@ -14,8 +14,7 @@ export default function Home() {
                 <HomeIconMenu />
                 <Tour style={{ margin: 30 }} />
                 <TourFlatList style={{ margin: 20 }} />
-                <Event style={{ margin: 40 }} />
-                
+                <Event style={{ margin: 40 }} />               
             </View>
         </ScrollView>
 

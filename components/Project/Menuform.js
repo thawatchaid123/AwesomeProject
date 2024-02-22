@@ -11,7 +11,7 @@ import {
 import BookStorage from "../../storages/BookStorage";
 import UploadArea from "../../components/week11/UploadArea";
 
-export default function BookForm() {
+export default function Menuform() {
   const [id, setId] = useState(
     "_" + Math.random().toString(36).substring(2, 9)
   );
@@ -44,13 +44,13 @@ export default function BookForm() {
     //SAVE
     await BookStorage.writeItem(new_data);
     //REDIRECT TO
-    navigation.navigate("Book");
+    navigation.navigate("Menu");
   };
 
   return (
     <KeyboardAvoidingView style={{ flex: 1, padding: 20 }}>
       <ScrollView>
-        <Text>ชื่อหนังสือ</Text>
+        <Text>ชื่อ</Text>
         <TextInput
           placeholder="Enter name ..."
           value={name}
@@ -71,7 +71,6 @@ export default function BookForm() {
 
         <UploadArea image={image} setImage={setImage} />
       </ScrollView>
-      
       <Button title="SAVE" color="tomato" onPress={saveBook} />
     </KeyboardAvoidingView>
   );
