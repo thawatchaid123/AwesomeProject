@@ -33,10 +33,12 @@ import HomeStack from './navigations/HomeStack';
 import BottomTab from './navigations/BottomTab';
 import RootStack from './navigations/RootStack';
 
-
+import { AuthContext, AuthContextProvider } from "./hooks/AuthContextProvider";
 
 export default function App() {
   return (
+
+    
    // <View style={{alignItems: 'center', top: 50}}>
    //     <Greeting name='Rexxar' />
   //      <Greeting name='Jaina' />
@@ -60,11 +62,13 @@ export default function App() {
     //<Health />
    //<Resort/>
    //<Home/>
+   <AuthContextProvider>
    <NavigationContainer>
    {/* <HomeStack/> */}
    {/* <BottomTab/> */}
    <RootStack/>
     </NavigationContainer>
+    </AuthContextProvider>
 
 
 
